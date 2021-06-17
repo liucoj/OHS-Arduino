@@ -24,10 +24,11 @@
 /** Random device address */
 esp_bd_addr_t rnd_addr = {0xFF, 0xBB, 0xCC, 0xDD, 0xEE, 0xFF};
 
+/** REPLACE WITH YOUR KEY, this is fake one, consider this padding
 uint8_t public_key[28] = {
-    0x05, 0x25, 0x6a, 0x44, 0xcb, 0x28, 0xd2, 0xe8, 0xa1, 0x97, 0x81, 0xc8,
-    0x80, 0xd0, 0xbc, 0x83, 0xc0, 0x04, 0x73, 0x32, 0xd8, 0xc8, 0x46, 0x28,
-    0x09, 0xa2, 0xde, 0x74};
+    0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05,
+    0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05, 0x05,
+    0x05, 0x05, 0x05, 0x05};
 
 /** Advertisement payload */
 uint8_t adv_data[31] = {
@@ -118,7 +119,9 @@ void set_payload_from_key(uint8_t *payload, uint8_t *public_key) {
 void setup() {
   Serial.begin(115200);
   M5.begin();
-//   M5.Axp.ScreenBreath(7);
+// M5.Axp.ScreenBreath(7);
+
+// Write text on LCD
   M5.Lcd.setRotation(3);
   M5.Lcd.setCursor(0, 30, 4);
   M5.Lcd.println("OHS Ready!");
@@ -150,6 +153,7 @@ void setup() {
 }
 
 void loop() {
+  // LED loop
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(10000);                       // wait for a second
   digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
