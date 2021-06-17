@@ -23,4 +23,6 @@ To generate a .key file with correct padding it'd useful what's on flash_esp.sh 
 - Right button for some infos
 - BT Paring 
 
+![M5StickC](https://user-images.githubusercontent.com/14237462/122478870-76e51480-cfca-11eb-9ce0-593bfe8623aa.gif)
+
 
