@@ -1,5 +1,5 @@
 # OHS Arduino
- OpenHayStack arduino sketch
+ OpenHayStack Arduino sketch
 
 This sketch is based upon OpenHayStack main.c Firmware code for ESP32.
 https://github.com/seemoo-lab/openhaystack
@@ -11,6 +11,7 @@ https://github.com/seemoo-lab/openhaystack
 
 Is it possibile to get a key creating a new accessory in OHS app e copy its advertising key.
 To generate a .key file with correct padding it'd useful what's on flash_esp.sh script on OHS main project.
+
     echo "$PUBKEY" | python3 -m base64 -d - > "$KEYFILE" where PUBKEY is your adv_key and KEYFILE is your tmp.key blank file.
 
 # What is working
